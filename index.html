@@ -9,19 +9,19 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg:      #18181b;
-      --card:    #27272a;
-      --border:  #3f3f46;
-      --surface: #18181b;
-      --brand:   #10b981;
-      --brand-dim: rgba(16,185,129,0.12);
-      --brand-dim2: rgba(16,185,129,0.06);
-      --text:    #f4f4f5;
-      --text2:   #a1a1aa;
-      --text3:   #71717a;
-      --red:     #ef4444;
-      --yellow:  #eab308;
-      --blue:    #3b82f6;
+      --bg:        #F2F2F7;
+      --card:      #FFFFFF;
+      --border:    #E5E5EA;
+      --surface:   #F2F2F7;
+      --brand:     #2DC76D;
+      --brand-dim: rgba(45,199,109,0.12);
+      --brand-dim2: rgba(45,199,109,0.06);
+      --text:      #1C1C1E;
+      --text2:     #6C6C70;
+      --text3:     #AEAEB2;
+      --red:       #FF3B30;
+      --yellow:    #FF9F0A;
+      --blue:      #007AFF;
     }
 
     body {
@@ -40,12 +40,14 @@
       border: 1px solid var(--border);
       border-radius: 20px;
       padding: 20px;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.07);
     }
     .card-sm {
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 14px;
       padding: 14px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
     }
     .brand-card {
       background: var(--brand);
@@ -125,7 +127,7 @@
       white-space: nowrap;
     }
     .btn-brand { background: var(--brand); color: #fff; }
-    .btn-brand:hover { background: #059669; }
+    .btn-brand:hover { background: #25a85c; }
     .btn-brand:disabled { opacity: 0.6; cursor: not-allowed; }
     .btn-ghost { background: transparent; color: var(--brand); border: 1.5px solid var(--brand); }
     .btn-ghost:hover { background: var(--brand-dim); }
@@ -150,9 +152,10 @@
       position: sticky;
       top: 0;
       z-index: 50;
-      background: rgba(24,24,27,0.96);
+      background: rgba(242,242,247,0.96);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
+      box-shadow: 0 1px 0 rgba(0,0,0,0.06);
     }
     .nav-header {
       display: flex;
@@ -225,7 +228,7 @@
       text-align: center;
       user-select: none;
     }
-    .nav-card:hover { border-color: var(--brand); transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.3); }
+    .nav-card:hover { border-color: var(--brand); transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.12); }
     .nav-card-icon { font-size: 26px; margin-bottom: 8px; }
     .nav-card-label { font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; }
 
@@ -260,7 +263,7 @@
     /* ── Table ── */
     .tbl { width: 100%; border-collapse: collapse; }
     .tbl th { font-size: 9px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text2); padding: 6px 6px 8px; border-bottom: 1px solid var(--border); }
-    .tbl td { font-size: 13px; padding: 9px 6px; border-bottom: 1px solid rgba(63,63,70,0.5); }
+    .tbl td { font-size: 13px; padding: 9px 6px; border-bottom: 1px solid rgba(0,0,0,0.07); }
     .tbl tr:last-child td { border-bottom: none; }
     .tbl-right { text-align: right; }
 
@@ -308,16 +311,16 @@
 
     /* ── Scrollbar ── */
     ::-webkit-scrollbar { width: 5px; height: 5px; }
-    ::-webkit-scrollbar-track { background: var(--card); }
-    ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: #C7C7CC; border-radius: 3px; }
 
     /* ── Gear optimizer ── */
-    .gear-mid-row { background: rgba(16,185,129,0.07); border-radius: 6px; }
-    .alt-card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 14px; cursor: pointer; transition: all 0.15s; margin-bottom: 8px; display: flex; align-items: center; justify-content: space-between; }
-    .alt-card:hover, .alt-card.sel { border-color: rgba(16,185,129,0.5); background: rgba(16,185,129,0.07); }
+    .gear-mid-row { background: rgba(45,199,109,0.07); border-radius: 6px; }
+    .alt-card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 14px; cursor: pointer; transition: all 0.15s; margin-bottom: 8px; display: flex; align-items: center; justify-content: space-between; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+    .alt-card:hover, .alt-card.sel { border-color: rgba(45,199,109,0.5); background: rgba(45,199,109,0.07); }
 
     /* ── Frac gradient pill ── */
-    .frac-pill { background: #fef3c7; border-radius: 12px; padding: 12px 16px; display: flex; align-items: center; justify-content: space-between; color: #92400e; }
+    .frac-pill { background: #fff8e1; border: 1px solid #ffe082; border-radius: 12px; padding: 12px 16px; display: flex; align-items: center; justify-content: space-between; color: #795548; }
 
     @media (max-width: 480px) {
       .grid-3 { grid-template-columns: 1fr 1fr; }
@@ -341,6 +344,7 @@
       width: 264px;
       background: var(--card);
       border-right: 1px solid var(--border);
+      box-shadow: 4px 0 24px rgba(0,0,0,0.10);
       z-index: 201;
       transform: translateX(-100%);
       transition: transform 0.28s cubic-bezier(0.4,0,0.2,1);
@@ -365,7 +369,7 @@
       border-radius: 8px; font-family: inherit;
       line-height: 1; transition: color 0.15s;
     }
-    .sidebar-close:hover { color: var(--text); background: rgba(255,255,255,0.05); }
+    .sidebar-close:hover { color: var(--text); background: rgba(0,0,0,0.05); }
     #sidebar-nav {
       padding: 10px 8px;
       display: flex; flex-direction: column; gap: 2px;
@@ -386,13 +390,13 @@
       padding: 12px 14px 6px;
     }
     .menu-btn {
-      background: var(--border); border: none; border-radius: 10px;
+      background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
       width: 40px; height: 40px;
       display: flex; align-items: center; justify-content: center;
-      font-size: 20px; cursor: pointer; color: var(--text);
+      font-size: 20px; cursor: pointer; color: var(--text2);
       flex-shrink: 0; transition: all 0.15s; font-family: inherit;
     }
-    .menu-btn:hover { background: var(--brand-dim); color: var(--brand); }
+    .menu-btn:hover { background: var(--brand-dim); color: var(--brand); border-color: var(--brand); }
   </style>
 </head>
 <body>
@@ -2206,7 +2210,7 @@ function wellCapRowHTML(row, i) {
       <div class="flex gap-2 mb-2 items-end">
         <div class="flex-1">
           <label class="lbl">Depth (FT)</label>
-          <input type="number" class="field" value="${row.depth}" oninput="wellCapUpdate(${i},'depth',this.value)" placeholder="0">
+          <input type="number" class="field" value="${row.depth}" onchange="wellCapUpdate(${i},'depth',this.value)" placeholder="0">
         </div>
         <button class="btn-danger" onclick="wellCapDel(${i})">✕</button>
       </div>
@@ -2214,12 +2218,12 @@ function wellCapRowHTML(row, i) {
         <label class="lbl">Casing</label>
         <select class="field" onchange="wellCapUpdate(${i},'tubular',this.value)">
           <option value="custom"${row.tubular==='custom'?' selected':''}>Custom / Enter BBL/FT</option>
-          ${TUBULAR_DATA.map(t=>`<option value="${t.type}"${row.tubular===t.type?' selected':''}>${t.type} (${t.factor})</option>`).join('')}
+          ${TUBULAR_DATA.map((t,ti)=>`<option value="${ti}"${row.tubular===t.type?' selected':''}>${t.type} (${t.factor})</option>`).join('')}
         </select>
       </div>
       <div>
         <label class="lbl">BBL/FT</label>
-        <input type="number" class="field" step="0.0001" value="${row.bblPerFt}" oninput="wellCapUpdate(${i},'bblPerFt',this.value)" placeholder="0">
+        <input type="number" class="field" step="0.0001" value="${row.bblPerFt}" onchange="wellCapUpdate(${i},'bblPerFt',this.value)" placeholder="0">
       </div>
     </div>`;
 }
@@ -2245,10 +2249,11 @@ function wellCapUpdate(i, field, v) {
   const row = S.wellCapRows[i];
   if (!row) return;
   if (field === 'tubular') {
-    row.tubular = v;
-    if (v !== 'custom') {
-      const t = TUBULAR_DATA.find(t => t.type === v);
-      if (t) row.bblPerFt = t.factor;
+    if (v === 'custom') {
+      row.tubular = 'custom';
+    } else {
+      const t = TUBULAR_DATA[parseInt(v)];
+      if (t) { row.tubular = t.type; row.bblPerFt = t.factor; }
     }
   } else {
     row[field] = parseFloat(v) || 0;
